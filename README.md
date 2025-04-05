@@ -1,4 +1,6 @@
-"# sptech_ativ5-arqComp_dat-acqu-ino"
+# sptech_ativ5-arqComp_dat-acqu-ino
+
+Esse código é baseado no repositório da sptech dat-acqu-ino (https://github.com/BandTec/dat-acqu-ino)
 
 <img src="https://user-images.githubusercontent.com/46379117/189931169-9df7b283-bf43-4af4-8154-b1669862090e.png" width="1000px">
 
@@ -35,3 +37,7 @@ _O comando acima irá iniciar sua API e efetuar os comandos de acordo com a sua 
 5. Para "ver" sua API funcionando você pode visualizar os gráficos das capturas sendo exibidos no seu navegador pelo caminho **http://localhost:3300** ou efetuando SELECT no seu Banco de Dados, caso tenha optado por inseri-los.
 
 6. Caso queira parar a API, tecle **CTRL+C** no terminal em que a API está rodando.
+
+# Adaptação Grupo 1 - Dryflow 🧑‍🎓👩‍🎓🧑‍🎓👩‍🎓🧑‍🎓🧑‍🎓
+
+Fizemos ajuste no código para ser usado no sensor de umidade DHT11 da nossa aplicação.
