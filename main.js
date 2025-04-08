@@ -18,7 +18,7 @@ const serial = async (valoresSensorAnalogico, valoresSensorDigital) => {
       host: "127.0.0.1",
       user: "dryflow",
       password: "123456",
-      database: "dryflow01",
+      database: "dryflow",
       port: 3306,
     })
     .promise();
@@ -57,7 +57,7 @@ const serial = async (valoresSensorAnalogico, valoresSensorDigital) => {
       const sensorAnalogico = parseFloat(valores[1]);      
       */
       const sensorDigital = parseInt(valores[1]);
-      const sensorAnalogico = parseFloat(valores[0]);
+      const sensorAnalogico = parseInt(valores[0]);
 
       // armazena os valores dos sensores nos arrays correspondentes
       valoresSensorAnalogico.push(sensorAnalogico);
@@ -67,8 +67,8 @@ const serial = async (valoresSensorAnalogico, valoresSensorDigital) => {
       if (HABILITAR_OPERACAO_INSERIR) {
         // este insert irá inserir os dados na tabela "medida"
         await poolBancoDados.execute(
-          "INSERT INTO valores (valorAnalogico, valorDigital) VALUES (?, ?)",
-          [sensorAnalogico, sensorDigital]
+          "INSERT INTO registrossensor (umidadeRegistrada, dtHrRegistrada, fksensor) VALUES (?, current_timestamp, 1)",
+          [sensorAnalogico]
         );
         console.log(
           "valores inseridos no banco: ",
